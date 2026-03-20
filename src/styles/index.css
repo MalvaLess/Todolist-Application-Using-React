@@ -1,3 +1,227 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font:
+    14px "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+  line-height: 1.4em;
+  background: #f5f5f5;
+  color: #4d4d4d;
+  min-width: 230px;
+  max-width: 550px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-weight: 300;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button,
+input[type="checkbox"] {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.todoapp {
+  background: #fff;
+  margin: 130px 0 40px 0;
+  position: relative;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.todoapp h1 {
+  position: absolute;
+  top: -155px;
+  width: 100%;
+  font-size: 100px;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(175, 47, 47, 0.15);
+}
+
+.new-todo {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  font-size: 24px;
+  line-height: 1.4em;
+  border: none;
+  outline: none;
+  color: inherit;
+  padding: 16px 16px 16px 60px;
+  background: rgba(0, 0, 0, 0.003);
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+}
+
+.main {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #e6e6e6;
+}
+
+.todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-list li {
+  position: relative;
+  font-size: 24px;
+  box-shadow: 0 -1px 0 #ededed;
+  overflow: hidden;
+}
+
+.todo-list li label {
+  white-space: pre;
+  word-break: break-word;
+  padding: 15px 60px 15px 15px;
+  margin-left: 45px;
+  display: block;
+  line-height: 1.2;
+  transition: color 0.4s;
+}
+
+.todo-list li.completed label {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
+
+.todo-list li .destroy {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+  font-size: 30px;
+  color: #cc9a9a;
+  transition: color 0.2s ease-out;
+}
+
+.todo-list li .destroy:hover {
+  color: #af5b5e;
+}
+
+.todo-list li .destroy:after {
+  content: "×";
+}
+
+.todo-list li:hover .destroy {
+  display: block;
+}
+
+.footer {
+  color: #777;
+  padding: 10px 15px;
+  min-height: 40px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+  position: relative;
+}
+
+.footer:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 8px 0 -3px #f6f6f6,
+    0 9px 1px -3px rgba(0, 0, 0, 0.2),
+    0 16px 0 -6px #f6f6f6,
+    0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+.todo-count {
+  float: left;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.todo-count strong {
+  font-weight: 500;
+}
+
+.filters {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filters li {
+  display: inline;
+}
+
+.filters a {
+  color: inherit;
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.filters a.selected,
+.filters a:hover {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.clear-completed {
+  float: right;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.clear-completed:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 430px) {
+  .footer {
+    min-height: 50px;
+  }
+  .filters {
+    bottom: 10px;
+  }
+}
+
 /* 
 
     You can write your own styles here...
